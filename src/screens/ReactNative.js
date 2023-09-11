@@ -42,6 +42,7 @@ const ReactScreen = () => {
         setHtmlContent(previousData.concat(response.data?.items));
       })
       .catch(error => {
+        //to check whether device is connected to the internet
         if (error?.message == 'Network Error') {
           setIsConnected(false);
         }
